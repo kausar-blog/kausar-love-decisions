@@ -1,0 +1,15 @@
+
+### Steps to Add this to your GitHub Repository:
+
+1. Create a **README.md** file in the root directory of your repository.
+2. Copy and paste the content above into the **README.md** file.
+3. Save the file.
+
+### Push to GitHub:
+
+Once you've added the **README.md** file, run these commands in your terminal:
+
+```bash
+git add README.md
+git commit -m "Add README.md file"
+git push origin main
