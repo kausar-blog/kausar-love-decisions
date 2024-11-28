@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Choose Wisely</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      /* Custom CSS for additional styles */
+      .gradient-background {
+        background: linear-gradient(
+          135deg,
+          rgba(51, 51, 255, 0.7),
+          rgba(255, 0, 150, 0.7)
+        );
+        transition: background 2s ease; /* Transition for gradient background change */
+      }
+
+      /* Custom hover effect for container - moves up */
+      .container-hover {
+        transition: transform 0.5s ease, background 1s ease;
+      }
+
+      .container-hover:hover {
+        transform: translateY(-10px); /* Moves container up */
+      }
+
+      /* Custom hover effect for text - moves the text up and changes color */
+      .text-hover {
+        transition: transform 0.3s ease, color 0.3s ease;
+      }
+
+      /* Updated hover color for text */
+      .text-hover:hover {
+        color: #ffd700; /* Bright gold color for text */
+        transform: translateY(-5px); /* Moves text 5px up */
+      }
+
+      /* Button hover effect */
+      .btn-hover:hover {
+        background-color: #ff1493;
+        transform: scale(1.05);
+        transition: all 0.3s ease-in-out;
+      }
+
+      /* Animation for text fade-in */
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .fade-in {
+        animation: fadeIn 1s ease-out;
+      }
+    </style>
+  </head>
+  <body
+    class="min-h-screen flex items-center justify-center p-6 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"
+  >
+    <!-- Container Box with Responsive Layout -->
+    <div
+      id="container"
+      class="max-w-3xl text-center p-8 rounded-xl shadow-xl fade-in relative overflow-hidden container-hover gradient-background"
+    >
+      <h1 class="text-4xl font-bold text-white mb-6 text-hover">
+        Make Sure ❤️
+      </h1>
+
+      <p class="text-xl text-white mb-4 text-hover">
+        You fall in love with the right person ❤️.
+      </p>
+      <p class="text-xl text-white mb-4 text-hover">
+        Don’t mess up your life ❌, because this is one of the most important
+        decisions 🌟.
+      </p>
+      <p class="text-xl text-white mb-4 text-hover">
+        I’m telling you, one wrong person 🚫 can ruin your entire life 💔.
+      </p>
+      <p class="text-xl text-white mb-4 text-hover">
+        Am I right? 🤔 So, choose wisely ✅, find someone who truly deserves you
+        🌹.
+      </p>
+      <p class="text-xl text-white mb-4 text-hover">
+        Find the one who lifts you up ⬆️, so high 🌄, that no one can ever pull
+        you down 🚀.
+      </p>
+      <p class="text-xl text-white mb-4 text-hover">
+        Love someone who strengthens you 💪, makes you happy 😊, and turns you
+        into an unstoppable force 🔥.
+      </p>
+      <p class="text-xl text-white mb-6 text-hover">
+        Choose love wisely; your happiness and future depend on it. 💖
+      </p>
+
+      <!-- Button to navigate to the full website -->
+      <div class="flex justify-center">
+        <a
+          href="https://kausar-love-decisions.netlify.app/"
+          class="btn-hover bg-green-600 text-white px-6 py-3 rounded-full text-xl font-semibold hover:bg-green-700 transition duration-300"
+        >
+          Choose Wisely 💖
+        </a>
+      </div>
+
+      <!-- Floating Heart Decoration -->
+      <div class="absolute bottom-4 right-4 text-6xl text-red-500 opacity-40">
+        ❤️
+      </div>
+    </div>
+
+    <script>
+      // JavaScript to change the background gradient color of the container every 3 seconds
+      function getRandomGradient() {
+        const colors = [
+          "linear-gradient(135deg, rgba(255, 165, 0, 0.7), rgba(255, 0, 150, 0.7))",
+          "linear-gradient(135deg, rgba(255, 105, 180, 0.7), rgba(0, 255, 255, 0.7))",
+          "linear-gradient(135deg, rgba(34, 193, 195, 0.7), rgba(253, 187, 45, 0.7))",
+          "linear-gradient(135deg, rgba(0, 255, 255, 0.7), rgba(255, 87, 34, 0.7))",
+        ];
+        return colors[Math.floor(Math.random() * colors.length)];
+      }
+
+      function changeBackgroundGradient() {
+        const container = document.getElementById("container");
+        container.style.background = getRandomGradient();
+      }
+
+      // Change gradient background color every 3 seconds
+      setInterval(changeBackgroundGradient, 3000);
+    </script>
+  </body>
+</html>
